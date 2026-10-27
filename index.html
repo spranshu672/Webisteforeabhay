@@ -1,0 +1,3406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>For Abhay ❤️ | The Anshita x Abhay Scrapbook</title>
+  <meta name="description" content="A surprise romantic scrapbook gift for Abhay from Anshita, filled with our memories, inside jokes, and a special message.">
+  <meta name="theme-color" content="#ffe5ec">
+
+  <!-- Google Fonts: Handwritten & Rounded Display Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@400;600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS RESET & VARIABLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --font-display: 'Fredoka', 'Baloo 2', cursive, sans-serif;
+      --font-hand: 'Caveat', 'Patrick Hand', cursive;
+      --font-body: 'Nunito', sans-serif;
+
+      /* Pastel Romantic Scrapbook Palette */
+      --bg-cream: #fffdf9;
+      --bg-pink-soft: #fff0f3;
+      --bg-lavender: #f4effa;
+      --bg-paper: #ffffff;
+      
+      --color-blush: #ffccd5;
+      --color-rose: #ff4d6d;
+      --color-deep-rose: #c9184a;
+      --color-berry: #800f2f;
+      --color-lavender: #dcd6f7;
+      --color-lavender-dark: #7b2cbf;
+      --color-yellow: #fff3b0;
+      --color-gold: #ffb703;
+      --color-mint: #d8f3dc;
+      --color-sky: #d0f4de;
+
+      --text-main: #2b1e23;
+      --text-muted: #6d545e;
+      --text-light: #9e858f;
+
+      --washi-pink: rgba(255, 175, 189, 0.85);
+      --washi-yellow: rgba(255, 230, 109, 0.85);
+      --washi-mint: rgba(168, 230, 207, 0.85);
+      --washi-lavender: rgba(218, 204, 240, 0.85);
+
+      --shadow-sm: 0 4px 12px rgba(90, 30, 45, 0.08);
+      --shadow-md: 0 10px 25px rgba(90, 30, 45, 0.12);
+      --shadow-polaroid: 0 14px 35px rgba(60, 20, 35, 0.14), 0 3px 8px rgba(0,0,0,0.05);
+      --shadow-lift: 0 18px 40px rgba(201, 24, 74, 0.22);
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 26px;
+      --radius-full: 9999px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      background-image: 
+        radial-gradient(#ffccd5 0.75px, transparent 0.75px),
+        radial-gradient(#dcd6f7 0.75px, var(--bg-cream) 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      min-height: 100vh;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Selection */
+    ::selection {
+      background: #ffb3c6;
+      color: #590d22;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fff0f3;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ffb3c6;
+      border-radius: 10px;
+      border: 2px solid #fff0f3;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff758f;
+    }
+
+    /* Common Utility / Scrapbook Decors */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--color-deep-rose);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-hand);
+      font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 40px;
+      display: block;
+    }
+
+    .title-wrapper {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .washi-tape {
+      position: absolute;
+      height: 28px;
+      width: 110px;
+      background: var(--washi-pink);
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+      opacity: 0.88;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);
+      z-index: 5;
+      pointer-events: none;
+    }
+    .washi-tape.yellow { background: var(--washi-yellow); transform: translateX(-50%) rotate(2.5deg); }
+    .washi-tape.mint { background: var(--washi-mint); transform: translateX(-50%) rotate(-1.5deg); }
+    .washi-tape.lavender { background: var(--washi-lavender); transform: translateX(-50%) rotate(3deg); }
+
+    /* Button Styles */
+    .btn-cute {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      border: 3px solid #2b1e23;
+      background: #ff758f;
+      color: #ffffff;
+      box-shadow: 4px 5px 0px #2b1e23;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .btn-cute:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 6px 7px 0px #2b1e23;
+      background: #ff4d6d;
+    }
+
+    .btn-cute:active {
+      transform: translateY(2px) scale(0.98);
+      box-shadow: 2px 2px 0px #2b1e23;
+    }
+
+    .btn-cute.secondary {
+      background: #fffdf9;
+      color: var(--text-main);
+    }
+    .btn-cute.secondary:hover {
+      background: #fff0f3;
+    }
+
+    .btn-cute.lavender {
+      background: #a29bfe;
+      color: #fff;
+    }
+
+    /* Sticker Badges */
+    .badge-stamp {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border: 2px dashed #ff4d6d;
+      border-radius: 8px;
+      background: #fff0f3;
+      color: #c9184a;
+      transform: rotate(-3deg);
+      box-shadow: 2px 3px 0 rgba(201, 24, 74, 0.15);
+    }
+
+    /* Floating Canvas & Cursor */
+    #confetti-canvas, #sparkle-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Floating Music Button */
+    .music-widget {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .music-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid #2b1e23;
+      box-shadow: 3px 4px 0px #2b1e23;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+
+    .music-btn:hover {
+      transform: scale(1.1) rotate(15deg);
+    }
+
+    .music-btn.playing {
+      animation: spinVinyl 4s linear infinite;
+      background: #ffe5ec;
+      border-color: #ff4d6d;
+    }
+
+    .music-tooltip {
+      position: absolute;
+      right: 65px;
+      background: #2b1e23;
+      color: #fff;
+      font-family: var(--font-hand);
+      font-size: 1.1rem;
+      padding: 5px 12px;
+      border-radius: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .music-widget:hover .music-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @keyframes spinVinyl {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* ==========================================================================
+       SECTION 1: LOADING SCREEN
+       ========================================================================== */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff5f7;
+      background-image: 
+        radial-gradient(#ffb3c6 1.2px, transparent 1.2px),
+        radial-gradient(#ffd6e0 1.2px, #fff5f7 1.2px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      padding: 24px;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+    }
+
+    #loading-screen.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader-box {
+      background: #ffffff;
+      padding: 40px 32px;
+      border-radius: var(--radius-lg);
+      border: 3.5px solid #2b1e23;
+      box-shadow: 8px 10px 0px #2b1e23;
+      text-align: center;
+      max-width: 440px;
+      width: 100%;
+      position: relative;
+    }
+
+    .bouncing-heart-box {
+      font-size: 4rem;
+      animation: heartBeatBounce 1.2s infinite ease-in-out;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 6px 12px rgba(255, 77, 109, 0.3));
+    }
+
+    @keyframes heartBeatBounce {
+      0%, 100% { transform: scale(1) translateY(0); }
+      30% { transform: scale(1.25) translateY(-14px) rotate(-5deg); }
+      50% { transform: scale(1.1) translateY(-6px) rotate(4deg); }
+      70% { transform: scale(1.18) translateY(-10px) rotate(-2deg); }
+    }
+
+    .loader-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: #2b1e23;
+      margin-bottom: 6px;
+    }
+
+    .loader-msg {
+      font-family: var(--font-hand);
+      font-size: 1.4rem;
+      color: var(--color-deep-rose);
+      min-height: 48px;
+      margin-bottom: 20px;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 22px;
+      background: #ffe5ec;
+      border: 2.5px solid #2b1e23;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ff758f, #ff4d6d, #c9184a);
+      border-radius: var(--radius-full);
+      transition: width 0.3s ease;
+      position: relative;
+      box-shadow: inset 0 -2px 0 rgba(0,0,0,0.15);
+    }
+
+    .progress-pct {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .loader-btn-wrap {
+      margin-top: 24px;
+      display: none;
+    }
+
+    /* ==========================================================================
+       SECTION 2: HERO
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding: 100px 0 80px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-banner-tape {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffe5ec;
+      border: 2px dashed #ff4d6d;
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-hand);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-deep-rose);
+      margin-bottom: 24px;
+      transform: rotate(-1.5deg);
+      box-shadow: 2px 4px 10px rgba(255, 77, 109, 0.15);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--text-main);
+      margin-bottom: 20px;
+      position: relative;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-title .highlight {
+      color: var(--color-rose);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-title .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      width: 100%;
+      height: 14px;
+      background: rgba(255, 230, 109, 0.55);
+      z-index: -1;
+      transform: rotate(-1deg);
+      border-radius: 4px;
+    }
+
+    .hero-desc {
+      font-family: var(--font-body);
+      font-size: clamp(1.1rem, 2.8vw, 1.4rem);
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .hero-stats-badge {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .stat-pill {
+      background: #ffffff;
+      border: 2.5px solid #2b1e23;
+      box-shadow: 3px 4px 0px #2b1e23;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat-pill .num {
+      color: var(--color-rose);
+      font-weight: 700;
+    }
+
+    .floating-stickers {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .sticker-doodle {
+      position: absolute;
+      filter: drop-shadow(2px 5px 8px rgba(0,0,0,0.1));
+      animation: floatDoodle 6s ease-in-out infinite;
+      user-select: none;
+    }
+
+    .sticker-doodle.s1 { top: 12%; left: 8%; transform: rotate(-12deg); animation-delay: 0s; font-size: 2.8rem; }
+    .sticker-doodle.s2 { top: 20%; right: 9%; transform: rotate(15deg); animation-delay: 1.5s; font-size: 3rem; }
+    .sticker-doodle.s3 { bottom: 18%; left: 12%; transform: rotate(8deg); animation-delay: 2.5s; font-size: 2.6rem; }
+    .sticker-doodle.s4 { bottom: 15%; right: 14%; transform: rotate(-10deg); animation-delay: 0.8s; font-size: 2.9rem; }
+
+    @keyframes floatDoodle {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-16px) rotate(6deg); }
+    }
+
+    /* ==========================================================================
+       SECTION 3: TIMELINE (HOW WE MET)
+       ========================================================================== */
+    .timeline-section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .timeline-container {
+      position: relative;
+      max-width: 960px;
+      margin: 40px auto 0;
+      padding: 20px 0;
+    }
+
+    /* Timeline center dashed line */
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #ff758f 0px,
+        #ff758f 10px,
+        transparent 10px,
+        transparent 18px
+      );
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .timeline-col {
+      width: calc(50% - 45px);
+      position: relative;
+    }
+
+    /* Odd items: Story on left, Photo on right */
+    .timeline-item:nth-child(odd) .timeline-col-story {
+      order: 1;
+    }
+    .timeline-item:nth-child(odd) .timeline-col-photo {
+      order: 3;
+    }
+
+    /* Even items: Photo on left, Story on right */
+    .timeline-item:nth-child(even) .timeline-col-photo {
+      order: 1;
+    }
+    .timeline-item:nth-child(even) .timeline-col-story {
+      order: 3;
+    }
+
+    .timeline-node {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3.5px solid #2b1e23;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      z-index: 4;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .timeline-item:hover .timeline-node {
+      transform: translate(-50%, -50%) scale(1.2) rotate(15deg);
+      background: #ffe5ec;
+    }
+
+    .timeline-card {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 3px solid #2b1e23;
+      box-shadow: 6px 7px 0px #2b1e23;
+      padding: 26px 24px;
+      width: 100%;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 8px 10px 0px #2b1e23;
+    }
+
+    .timeline-tag {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #ff4d6d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .timeline-heading {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .timeline-text {
+      font-family: var(--font-body);
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .timeline-hinglish {
+      font-family: var(--font-hand);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-deep-rose);
+      margin-top: 12px;
+      display: block;
+      background: #fff0f3;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border-left: 3px solid #ff4d6d;
+    }
+
+    /* Chapter 1 Dedicated Polaroid Frame */
+    .timeline-polaroid-card {
+      background: #ffffff;
+      padding: 14px 14px 20px 14px;
+      border-radius: 6px;
+      border: 3px solid #2b1e23;
+      box-shadow: 6px 7px 0px #2b1e23;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-polaroid-card {
+      transform: rotate(2deg);
+    }
+    .timeline-item:nth-child(even) .timeline-polaroid-card {
+      transform: rotate(-2deg);
+    }
+
+    .timeline-polaroid-card:hover {
+      transform: translateY(-6px) scale(1.03) rotate(0deg) !important;
+      box-shadow: 8px 12px 0px #2b1e23;
+      z-index: 6;
+    }
+
+    .timeline-polaroid-img-wrap {
+      width: 100%;
+      height: 280px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #fdf0f3;
+      position: relative;
+      border: 1.5px solid rgba(43, 30, 35, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .timeline-polaroid-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .timeline-polaroid-card:hover .timeline-polaroid-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .timeline-zoom-pill {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(43, 30, 35, 0.85);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(4px);
+      pointer-events: none;
+      opacity: 0.9;
+      transition: all 0.2s;
+    }
+
+    .timeline-polaroid-card:hover .timeline-zoom-pill {
+      opacity: 1;
+      background: #ff4d6d;
+    }
+
+    .timeline-polaroid-caption {
+      font-family: var(--font-hand);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #2b1e23;
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.25;
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile Timeline Layout */
+    @media (max-width: 768px) {
+      .timeline-container::before {
+        left: 24px;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 60px;
+        margin-bottom: 55px;
+        gap: 18px;
+      }
+
+      .timeline-col {
+        width: 100%;
+      }
+
+      /* On mobile, always show story card first, then polaroid photo right below */
+      .timeline-item .timeline-col-story {
+        order: 1 !important;
+      }
+      .timeline-item .timeline-col-photo {
+        order: 2 !important;
+      }
+
+      .timeline-node {
+        left: 24px;
+        top: 28px;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item:hover .timeline-node {
+        transform: translateX(-50%) scale(1.15) rotate(10deg);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-polaroid-card,
+      .timeline-item:nth-child(even) .timeline-polaroid-card {
+        transform: rotate(0deg);
+      }
+
+      .timeline-polaroid-img-wrap {
+        height: 260px;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION 4: PHOTO GALLERY (POLAROID WALL & LIGHTBOX)
+       ========================================================================== */
+    .gallery-section {
+      padding: 90px 0;
+      background: rgba(255, 240, 243, 0.4);
+      position: relative;
+      border-top: 3px dashed #ffb3c6;
+      border-bottom: 3px dashed #ffb3c6;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 32px 24px;
+      margin-top: 50px;
+      padding: 10px;
+    }
+
+    .polaroid-card {
+      background: #ffffff;
+      padding: 14px 14px 22px 14px;
+      border-radius: 4px;
+      box-shadow: var(--shadow-polaroid);
+      border: 1px solid rgba(0,0,0,0.06);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      user-select: none;
+    }
+
+    /* Alternating tilts */
+    .polaroid-card:nth-child(4n+1) { transform: rotate(-2.5deg); }
+    .polaroid-card:nth-child(4n+2) { transform: rotate(2deg); }
+    .polaroid-card:nth-child(4n+3) { transform: rotate(-1.5deg); }
+    .polaroid-card:nth-child(4n+4) { transform: rotate(3deg); }
+
+    .polaroid-card:hover {
+      transform: translateY(-8px) scale(1.05) rotate(0deg) !important;
+      z-index: 10;
+      box-shadow: 0 20px 45px rgba(201, 24, 74, 0.25);
+    }
+
+    .polaroid-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      background: #f7e6ea;
+      overflow: hidden;
+      border-radius: 3px;
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .polaroid-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .polaroid-card:hover .polaroid-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .polaroid-caption {
+      font-family: var(--font-hand);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #36282e;
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.25;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .polaroid-tape {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75px;
+      height: 22px;
+      background: var(--washi-yellow);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .polaroid-card:nth-child(2n) .polaroid-tape { background: var(--washi-pink); }
+    .polaroid-card:nth-child(3n) .polaroid-tape { background: var(--washi-mint); }
+    .polaroid-card:nth-child(4n) .polaroid-tape { background: var(--washi-lavender); }
+
+    /* Lightbox Modal */
+    #lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(30, 15, 22, 0.88);
+      backdrop-filter: blur(8px);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    #lightbox-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox-content {
+      background: #ffffff;
+      padding: 16px 16px 26px 16px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .lightbox-img-box {
+      width: 100%;
+      max-height: 65vh;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #2b1e23;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-img-box img {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .lightbox-details {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .lightbox-caption {
+      font-family: var(--font-hand);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2b1e23;
+    }
+
+    .lightbox-counter {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ff4d6d;
+      border: 3px solid #2b1e23;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 3px 3px 0 #2b1e23;
+      transition: transform 0.2s;
+    }
+    .lightbox-close:hover { transform: scale(1.15) rotate(90deg); }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid #2b1e23;
+      box-shadow: 3px 4px 0px #2b1e23;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      z-index: 20;
+    }
+    .lightbox-nav.prev { left: -24px; }
+    .lightbox-nav.next { right: -24px; }
+    .lightbox-nav:hover { background: #ffe5ec; transform: translateY(-50%) scale(1.1); }
+
+    @media (max-width: 600px) {
+      .lightbox-nav.prev { left: 10px; }
+      .lightbox-nav.next { right: 10px; }
+      .lightbox-close { top: -14px; right: -10px; }
+    }
+
+    /* ==========================================================================
+       SECTION 5: VIDEO MEMORIES (CINEMA CAROUSEL)
+       ========================================================================== */
+    .video-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .video-carousel-wrap {
+      position: relative;
+      max-width: 880px;
+      margin: 40px auto 0;
+      padding: 0 10px;
+    }
+
+    .video-filmstrip {
+      background: #2b1e23;
+      padding: 24px 20px;
+      border-radius: var(--radius-lg);
+      border: 4px solid #2b1e23;
+      box-shadow: 8px 12px 0px #ffccd5;
+      position: relative;
+    }
+
+    /* Filmstrip sprocket holes top and bottom */
+    .video-filmstrip::before, .video-filmstrip::after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      height: 12px;
+      background-image: radial-gradient(circle, #ffffff 45%, transparent 50%);
+      background-size: 24px 12px;
+      opacity: 0.35;
+    }
+    .video-filmstrip::before { top: 6px; }
+    .video-filmstrip::after { bottom: 6px; }
+
+    .video-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 16px 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .video-slider::-webkit-scrollbar { display: none; }
+
+    .video-card {
+      flex: 0 0 calc(50% - 10px);
+      scroll-snap-align: center;
+      background: #fffdf9;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .video-card {
+        flex: 0 0 88%;
+      }
+    }
+
+    .video-media-wrap {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      max-height: 380px;
+      background: #000;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-media-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(255, 77, 109, 0.9);
+      border: 3px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      z-index: 5;
+    }
+
+    .video-media-wrap:hover .video-play-overlay {
+      transform: scale(1.15);
+      background: #ff4d6d;
+    }
+
+    .video-play-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .video-info {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .video-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .video-desc {
+      font-family: var(--font-hand);
+      font-size: 1.2rem;
+      color: var(--color-deep-rose);
+      margin-top: 4px;
+    }
+
+    .video-nav-arrows {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    /* ==========================================================================
+       SECTION 6: REASONS I LOVE YOU (PICK-A-CARD FLIP)
+       ========================================================================== */
+    .reasons-section {
+      padding: 90px 0;
+      background: rgba(255, 230, 109, 0.15);
+      position: relative;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 45px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      height: 230px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: var(--radius-md);
+      border: 3px solid #2b1e23;
+      box-shadow: 5px 6px 0px #2b1e23;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flip-card-front {
+      background: #ffffff;
+      position: relative;
+    }
+
+    .flip-card-front .card-number {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #ff758f;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .flip-card-front .card-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .flip-card:hover .flip-card-front .card-icon {
+      transform: scale(1.2) rotate(8deg);
+    }
+
+    .flip-card-front .card-teaser {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .flip-card-front .card-hint {
+      font-family: var(--font-hand);
+      font-size: 1.05rem;
+      color: var(--text-light);
+      margin-top: 8px;
+    }
+
+    .flip-card-back {
+      background: #ffe5ec;
+      transform: rotateY(180deg);
+      border-color: #ff4d6d;
+    }
+
+    .flip-card-back .reason-quote {
+      font-family: var(--font-hand);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #590d22;
+      line-height: 1.4;
+    }
+
+    .flip-card-back .reason-tag {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: #ff4d6d;
+      margin-top: 10px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    /* ==========================================================================
+       SECTION 7: CRINGE CORNER
+       ========================================================================== */
+    .cringe-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .cringe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 36px;
+      margin-top: 50px;
+    }
+
+    /* Report Card */
+    .report-card-wrap {
+      background: #fffdf9;
+      border: 3.5px solid #2b1e23;
+      border-radius: var(--radius-lg);
+      box-shadow: 7px 9px 0px #2b1e23;
+      padding: 28px 24px;
+      position: relative;
+    }
+
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+    }
+
+    .report-table th, .report-table td {
+      padding: 10px 8px;
+      text-align: left;
+      border-bottom: 2px dashed #ffccd5;
+    }
+
+    .report-table th {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .report-table td {
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .grade-badge {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      border: 2px solid #2b1e23;
+      background: #ffd166;
+    }
+    .grade-badge.a-plus { background: #d8f3dc; color: #1b4332; }
+    .grade-badge.danger { background: #ffccd5; color: #800f2f; }
+
+    /* Boyfriend Certificate */
+    .certificate-card {
+      background: #fffdf7;
+      border: 4px double #2b1e23;
+      border-radius: var(--radius-md);
+      box-shadow: 7px 9px 0px #ffd166;
+      padding: 28px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .certificate-seal {
+      width: 64px;
+      height: 64px;
+      background: radial-gradient(circle, #ffbe0b, #fb5607);
+      border-radius: 50%;
+      border: 3px solid #2b1e23;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(251, 86, 7, 0.3);
+    }
+
+    .certificate-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #2b1e23;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .certificate-body {
+      font-family: var(--font-hand);
+      font-size: 1.35rem;
+      color: var(--text-muted);
+      margin: 14px 0;
+      line-height: 1.5;
+    }
+
+    .certificate-signature {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: 2px solid #2b1e23;
+    }
+
+    .sig-line {
+      font-family: var(--font-hand);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #c9184a;
+    }
+
+    /* Pickup Line Generator */
+    .generator-box {
+      background: #ffffff;
+      border: 3.5px solid #2b1e23;
+      border-radius: var(--radius-lg);
+      box-shadow: 7px 9px 0px #2b1e23;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .pickup-quote-display {
+      background: #fff0f3;
+      border: 2px dashed #ff4d6d;
+      border-radius: var(--radius-md);
+      padding: 24px 18px;
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-hand);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #800f2f;
+      margin: 20px 0;
+      line-height: 1.35;
+    }
+
+    /* Compatibility Calculator */
+    .calculator-box {
+      background: #ffffff;
+      border: 3.5px solid #2b1e23;
+      border-radius: var(--radius-lg);
+      box-shadow: 7px 9px 0px #a29bfe;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .calc-inputs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .calc-input {
+      width: 44%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 2.5px solid #2b1e23;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: center;
+      background: #fafafa;
+    }
+
+    .calc-heart-icon {
+      font-size: 1.6rem;
+      animation: pulseHeart 1.5s infinite;
+    }
+
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .calc-result {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #ff4d6d;
+      min-height: 44px;
+      margin-top: 14px;
+    }
+
+    /* ==========================================================================
+       SECTION 8: MINI GAME (CATCH THE HEARTS & KULCHAS)
+       ========================================================================== */
+    .game-section {
+      padding: 90px 0;
+      background: rgba(220, 214, 247, 0.35);
+      position: relative;
+    }
+
+    .game-wrapper {
+      max-width: 650px;
+      margin: 30px auto 0;
+      background: #ffffff;
+      border: 4px solid #2b1e23;
+      border-radius: var(--radius-lg);
+      box-shadow: 9px 12px 0px #2b1e23;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .game-scoreboard {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #ffe5ec;
+      border: 2.5px solid #2b1e23;
+      border-radius: var(--radius-full);
+      padding: 10px 20px;
+      margin-bottom: 16px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .game-canvas-box {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(180deg, #fff0f3 0%, #fffdf9 100%);
+      border: 3px solid #2b1e23;
+      border-radius: var(--radius-md);
+      position: relative;
+      overflow: hidden;
+      touch-action: none;
+    }
+
+    #gameCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .game-overlay-msg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 10;
+    }
+
+    .game-overlay-msg.hidden {
+      display: none;
+    }
+
+    .game-overlay-msg h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: #2b1e23;
+      margin-bottom: 8px;
+    }
+
+    .game-overlay-msg p {
+      font-family: var(--font-hand);
+      font-size: 1.35rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+
+    /* ==========================================================================
+       SECTION 9: "WILL YOU ..." FINALE
+       ========================================================================== */
+    .proposal-section {
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .proposal-card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 4px solid #2b1e23;
+      border-radius: var(--radius-lg);
+      box-shadow: 10px 14px 0px #ffccd5;
+      padding: 50px 30px;
+      position: relative;
+    }
+
+    .proposal-question {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #2b1e23;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    .proposal-sub {
+      font-family: var(--font-hand);
+      font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+      color: #c9184a;
+      margin-bottom: 40px;
+      display: block;
+    }
+
+    .proposal-btn-zone {
+      position: relative;
+      min-height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    #yesBtn {
+      font-size: 1.4rem;
+      padding: 16px 40px;
+      background: #ff4d6d;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      z-index: 2;
+    }
+
+    #noBtn {
+      font-size: 1.15rem;
+      padding: 14px 28px;
+      background: #e9ecef;
+      color: #495057;
+      box-shadow: 4px 4px 0px #2b1e23;
+      border-color: #2b1e23;
+      position: relative;
+      transition: all 0.15s ease-out;
+      user-select: none;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .proposal-success-box {
+      display: none;
+      animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .proposal-success-box h2 {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      color: #ff4d6d;
+      margin-bottom: 12px;
+    }
+
+    .proposal-success-box p {
+      font-family: var(--font-hand);
+      font-size: 1.6rem;
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       SECTION 10: FINAL LOVE LETTER
+       ========================================================================== */
+    .letter-section {
+      padding: 100px 0 120px;
+      position: relative;
+    }
+
+    .letter-paper-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #ffffff;
+      /* Lined notebook paper styling */
+      background-image: repeating-linear-gradient(
+        white 0px,
+        white 31px,
+        #ffe0e6 32px
+      );
+      border-radius: 8px;
+      border: 3px solid #2b1e23;
+      box-shadow: 12px 16px 0px #2b1e23;
+      padding: 50px 45px;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      .letter-paper-wrap {
+        padding: 35px 22px;
+      }
+    }
+
+    .letter-paper-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 36px;
+      width: 2px;
+      background: #ff758f;
+      opacity: 0.5;
+    }
+
+    .letter-salutation {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: #c9184a;
+      margin-bottom: 24px;
+    }
+
+    .letter-body {
+      font-family: var(--font-hand);
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: #2b1e23;
+      line-height: 1.85;
+      min-height: 180px;
+    }
+
+    .letter-milestone-highlight {
+      display: inline-block;
+      background: rgba(255, 77, 109, 0.15);
+      border-radius: 6px;
+      padding: 2px 10px;
+      color: #c9184a;
+      font-weight: 700;
+    }
+
+    .letter-signoff {
+      margin-top: 40px;
+      text-align: right;
+    }
+
+    .letter-sign-text {
+      font-family: var(--font-hand);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff4d6d;
+    }
+
+    .letter-final-action {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* Secret Vault Modal */
+    #secretModal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 10002;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    #secretModal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .secret-box {
+      background: #ffffff;
+      border: 4px solid #2b1e23;
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 8px 12px 0px #ffccd5;
+      position: relative;
+      animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px 60px;
+      font-family: var(--font-hand);
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      border-top: 2px dashed #ffb3c6;
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Audio Element for Background Music -->
+  <audio id="bgAudio" loop preload="none">
+    <source src="assets/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Interactive Canvases -->
+  <canvas id="confetti-canvas"></canvas>
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- Floating Music Toggle -->
+  <div class="music-widget">
+    <div class="music-tooltip" id="musicTooltip">Play our song 🎵</div>
+    <button class="music-btn" id="musicToggleBtn" aria-label="Toggle background music">
+      <span id="musicIcon">🎵</span>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 1: CUTE LOADING SCREEN
+       ========================================================================== -->
+  <div id="loading-screen" role="dialog" aria-modal="true" aria-label="Loading our memories">
+    <div class="loader-box">
+      <div class="washi-tape yellow"></div>
+      <div class="bouncing-heart-box">💖</div>
+      <h2 class="loader-title">Loading Our Love...</h2>
+      <div class="loader-msg" id="loaderMsg">Waking up the matchstick we met with...</div>
+      
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-pct" id="progressPct">0%</div>
+
+      <div class="loader-btn-wrap" id="loaderBtnWrap">
+        <button class="btn-cute" id="enterBtn">
+          <span>Unwrap Scrapbook 🎁</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 2: HERO SECTION
+       ========================================================================== */ -->
+  <header class="hero-section" id="hero">
+    <div class="floating-stickers" aria-hidden="true">
+      <div class="sticker-doodle s1">🔥</div>
+      <div class="sticker-doodle s2">🫓</div>
+      <div class="sticker-doodle s3">💐</div>
+      <div class="sticker-doodle s4">🕊️</div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="hero-banner-tape" id="easterEggLogo" title="Tap me 5 times for a secret!">
+        <span>✨ Handmade for Abhay with love ✨</span>
+      </div>
+
+      <h1 class="hero-title">
+        Hey <span class="highlight" id="heroName">Abhay</span>, I made you something 🥺
+      </h1>
+
+      <p class="hero-desc" id="heroSubtitle">
+        A tiny corner of the internet dedicated to my favorite <strong>motuu</strong>, certified <strong>bhondu</strong>, society gate bodyguard, and the guy who stole my heart with a matchstick.
+      </p>
+
+      <div class="hero-stats-badge">
+        <div class="stat-pill">
+          <span>📅 Together Since:</span>
+          <span class="num" id="heroDateBadge">June 16, 2026</span>
+        </div>
+        <div class="stat-pill">
+          <span>⏳ Days of Cuteness:</span>
+          <span class="num" id="heroDaysBadge">Infinity</span>
+        </div>
+        <div class="stat-pill">
+          <span>❤️ Status:</span>
+          <span class="num">In Love (1000%)</span>
+        </div>
+      </div>
+
+      <div>
+        <a href="#timeline" class="btn-cute" id="heroOpenBtn">
+          <span>Tap to Open 💌</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 3: HOW WE MET TIMELINE
+       ========================================================================== -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="badge-stamp">Chapter 1</div>
+        <h2 class="section-title">How We Met & Everything</h2>
+        <span class="section-subtitle">A random beach, one matchstick, and the best coincidence of my life</span>
+      </div>
+
+      <div class="timeline-container" id="timelineContainer">
+        <!-- Dynamically filled from CONFIG.timeline -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: PHOTO GALLERY (POLAROID WALL)
+       ========================================================================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="badge-stamp">Chapter 2</div>
+        <h2 class="section-title">The Polaroid Wall</h2>
+        <span class="section-subtitle">Warning: High levels of cuteness, smiles, and certified bhondu moments</span>
+      </div>
+
+      <div class="gallery-grid" id="polaroidGrid">
+        <!-- Dynamically rendered from CONFIG.photos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo zoomed in">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">&times;</button>
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous photo">&#10094;</button>
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next photo">&#10095;</button>
+      
+      <div class="lightbox-img-box">
+        <img id="lightboxImg" src="" alt="Enlarged photo memory">
+      </div>
+      
+      <div class="lightbox-details">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 5: VIDEO MEMORIES (CINEMA CAROUSEL)
+       ========================================================================== -->
+  <section class="video-section" id="videos">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="badge-stamp">Chapter 3</div>
+        <h2 class="section-title">Live in 4K: Video Vault</h2>
+        <span class="section-subtitle">Tap any reel to play our funniest, sweetest real-life memories</span>
+      </div>
+
+      <div class="video-carousel-wrap">
+        <div class="video-filmstrip">
+          <div class="video-slider" id="videoSlider">
+            <!-- Dynamically populated from CONFIG.videos -->
+          </div>
+        </div>
+
+        <div class="video-nav-arrows">
+          <button class="btn-cute secondary" id="videoPrevBtn" aria-label="Previous video">◀ Prev</button>
+          <span style="font-family: var(--font-hand); font-size: 1.3rem; font-weight: 700; color: #ff4d6d;">Swipe or tap to explore</span>
+          <button class="btn-cute secondary" id="videoNextBtn" aria-label="Next video">Next ▶</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: REASONS I LOVE YOU (PICK-A-CARD)
+       ========================================================================== -->
+  <section class="reasons-section" id="reasons">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="badge-stamp">Chapter 4</div>
+        <h2 class="section-title">Reasons I Love You</h2>
+        <span class="section-subtitle">Pick and tap any card to flip and reveal the truth 🤫</span>
+      </div>
+
+      <div class="cards-grid" id="reasonsGrid">
+        <!-- Dynamically rendered from CONFIG.reasons -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: CRINGE CORNER
+       ========================================================================== -->
+  <section class="cringe-section" id="cringe">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="badge-stamp">Chapter 5</div>
+        <h2 class="section-title">The Cringe Corner 🤪</h2>
+        <span class="section-subtitle">Prepare yourself: 100% cheesy, 100% authentic, 0% apologies</span>
+      </div>
+
+      <div class="cringe-grid">
+        <!-- 1. Relationship Report Card -->
+        <div class="report-card-wrap">
+          <div class="washi-tape pink"></div>
+          <h3 style="font-family: var(--font-display); font-size: 1.45rem; text-align: center;">📋 Boyfriend Report Card</h3>
+          <p style="font-family: var(--font-hand); font-size: 1.15rem; text-align: center; color: var(--text-muted);">Candidate: Abhay | Examiner: Anshita</p>
+          
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Score</th>
+                <th>Remark</th>
+              </tr>
+            </thead>
+            <tbody id="reportTableBody">
+              <!-- Dynamically populated from CONFIG.reportCard -->
+            </tbody>
+          </table>
+          <div style="margin-top: 15px; text-align: center; font-family: var(--font-display); font-weight: 700; color: #c9184a;">
+            Final Result: Promoted to Forever Husband Material ⭐
+          </div>
+        </div>
+
+        <!-- 2. Boyfriend Certificate -->
+        <div class="certificate-card">
+          <div class="washi-tape yellow"></div>
+          <div class="certificate-seal">🏆</div>
+          <div class="certificate-title">Official Certificate</div>
+          <div class="certificate-body">
+            This certifies that <strong>Abhay</strong> is officially recognized as the <em>World's Best Boyfriend</em>, dedicated Society Gate Sentry, and the undisputed king of annoying Anshita.
+          </div>
+          <div class="certificate-signature">
+            <span style="font-family: var(--font-body); font-size: 0.85rem; color: var(--text-muted);">Issue Date: Forever</span>
+            <span class="sig-line">Signed with love, Anshita ✍️</span>
+          </div>
+        </div>
+
+        <!-- 3. Cheesy Pickup Line Generator -->
+        <div class="generator-box">
+          <div class="washi-tape mint"></div>
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.45rem;">🧀 Cheesy Pickup Generator</h3>
+            <p style="font-family: var(--font-hand); font-size: 1.2rem; color: var(--text-muted);">Guaranteed to make you facepalm or blush</p>
+            <div class="pickup-quote-display" id="pickupDisplay">
+              "Are you a matchstick on that beach? Because you lit a fire in my heart 🔥"
+            </div>
+          </div>
+          <div>
+            <button class="btn-cute secondary" id="newPickupBtn">Hit Me With Cringe 🤪</button>
+          </div>
+        </div>
+
+        <!-- 4. Compatibility Calculator -->
+        <div class="calculator-box">
+          <div class="washi-tape lavender"></div>
+          <h3 style="font-family: var(--font-display); font-size: 1.45rem;">💖 Love Compatibility</h3>
+          <p style="font-family: var(--font-hand); font-size: 1.2rem; color: var(--text-muted);">Calculated using NASA & ISRO romantic algorithms</p>
+          
+          <div class="calc-inputs">
+            <input type="text" class="calc-input" id="calcName1" value="Abhay" readonly>
+            <span class="calc-heart-icon">❤️</span>
+            <input type="text" class="calc-input" id="calcName2" value="Anshita" readonly>
+          </div>
+
+          <button class="btn-cute" id="calcBtn">Calculate Our Love ✨</button>
+          <div class="calc-result" id="calcResult">1000% MATCH! 💍</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: MINI GAME (CATCH THE HEARTS & KULCHAS)
+       ========================================================================== -->
+  <section class="game-section" id="game">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="badge-stamp">Chapter 6</div>
+        <h2 class="section-title">The "Catch My Heart" Game</h2>
+        <span class="section-subtitle">Catch hearts (+10), matchsticks (+20), and stuffed kulchas (+50)! Avoid broken hearts (-15).</span>
+      </div>
+
+      <div class="game-wrapper">
+        <div class="washi-tape pink"></div>
+        <div class="game-scoreboard">
+          <div>Score: <span id="gameScore" style="color: #ff4d6d;">0</span></div>
+          <div>Time: <span id="gameTime" style="color: #7b2cbf;">30s</span></div>
+          <div>High Score: <span id="gameHighScore" style="color: #ffbe0b;">0</span></div>
+        </div>
+
+        <div class="game-canvas-box" id="gameCanvasBox">
+          <canvas id="gameCanvas"></canvas>
+
+          <!-- Start / Game Over Overlay -->
+          <div class="game-overlay-msg" id="gameOverlay">
+            <h3 id="gameOverTitle">Ready to Play? 🎮</h3>
+            <p id="gameOverMsg">Move your basket with your mouse, finger, or arrow keys to collect Anshita's love!</p>
+            <button class="btn-cute" id="startGameBtn">Start Game 🕹️</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: "WILL YOU ..." FINALE
+       ========================================================================== -->
+  <section class="proposal-section" id="proposal">
+    <div class="container">
+      <div class="proposal-card">
+        <div class="washi-tape yellow"></div>
+        
+        <div id="proposalQuestionBox">
+          <h2 class="proposal-question">
+            Abhay... Will you keep being my favorite person forever? 🥺
+          </h2>
+          <span class="proposal-sub">
+            (Read carefully: The "NO" button is broken by decree of love)
+          </span>
+
+          <div class="proposal-btn-zone" id="proposalBtnZone">
+            <button class="btn-cute" id="yesBtn">YES! Absolutely YES! ❤️</button>
+            <button class="btn-cute" id="noBtn">No way 🙅‍♂️</button>
+          </div>
+        </div>
+
+        <div class="proposal-success-box" id="proposalSuccessBox">
+          <h2>YAYYYY!! 🎉💖💍</h2>
+          <p>I knew you couldn't resist me! Best decision of your entire life, motuu.</p>
+          <div style="margin-top: 24px;">
+            <a href="#letter" class="btn-cute">Read Your Love Letter 💌</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 10: FINAL LOVE LETTER
+       ========================================================================== -->
+  <section class="letter-section" id="letter">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="badge-stamp">The Grand Finale</div>
+        <h2 class="section-title">From My Heart To Yours</h2>
+        <span class="section-subtitle">There's something I have never told you before... until now.</span>
+      </div>
+
+      <div class="letter-paper-wrap">
+        <div class="washi-tape mint"></div>
+        <div class="letter-salutation">My Dearest Abhay,</div>
+        
+        <div class="letter-body" id="letterBody">
+          <!-- Typewriter content will stream in here -->
+        </div>
+
+        <div class="letter-signoff">
+          <div class="letter-sign-text">Forever & Always Yours,</div>
+          <div class="letter-sign-text" style="color: #c9184a; font-size: 2.2rem;">Anshita 💖</div>
+        </div>
+
+        <div class="letter-final-action">
+          <button class="btn-cute" id="celebrateBtn">
+            <span>Explode Hearts! 🎆💖</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secret Easter Egg Modal -->
+  <div id="secretModal" role="dialog" aria-modal="true" aria-label="Secret Vault">
+    <div class="secret-box">
+      <div class="washi-tape yellow"></div>
+      <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: #ff4d6d; margin-bottom: 10px;">🤫 Secret Vault Unlocked!</h3>
+      <p style="font-family: var(--font-hand); font-size: 1.4rem; color: var(--text-main); margin-bottom: 20px;">
+        Hey Bhondu! You found the hidden Easter egg! Here is a secret voucher:
+        <br><br>
+        <strong>"Valid for unlimited head scratches, infinite stuffed kulchas, and one free pass whenever you lose in Chidiya Udd!" 🕊️❤️</strong>
+      </p>
+      <button class="btn-cute secondary" id="closeSecretBtn">Close Secret 💖</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Crafted with endless love & giggles by Anshita for Abhay ✨</p>
+    <p style="font-size: 1rem; margin-top: 6px; color: var(--text-light);">
+      "From a random beach matchstick to forever." 🕊️🫓🔥
+    </p>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT & CONFIGURATION
+       ========================================================================== -->
+  <script>
+    /* ==========================================================================
+       CENTRAL CONFIGURATION OBJECT
+       (Edit names, dates, captions, and file paths right here!)
+       ========================================================================== */
+    const CONFIG = {
+      // Couple Details
+      couple: {
+        boyfriendName: "Abhay",
+        girlfriendName: "Anshita",
+        nicknames: ["fuckboy", "Dhor", "bhondu", "motuu", "love", "baby"],
+        anniversaryDate: "2026-06-16", // Format: YYYY-MM-DD
+        anniversaryFormatted: "June 16, 2026",
+      },
+
+      // Audio Track (Place song.mp3 inside the 'assets' directory)
+      audio: {
+        src: "assets/song.mp3",
+        title: "Our Special Track",
+      },
+
+      // Section 3: Timeline Events
+      timeline: [
+        {
+          tag: "Day 1 • The Matchstick Spark",
+          title: "Beach Encounter with a Stranger",
+          text: "A random guy came and sat next to me on a beach. I looked at him and asked if he had a lighter... but he smiled and pulled out a single matchstick. That tiny flame started a conversation that never ended.",
+          hinglish: "Lighter maanga tha, matchstick mili... aur wahi se spark shuru ho gaya! 🔥",
+          icon: "🔥",
+          photo: "Photos and videos/Photo1.JPG",
+          photoCaption: "The beach encounter that started it all 🌊🔥"
+        },
+        {
+          tag: "The Cosmic Coincidence",
+          title: "Turns Out We Stayed At The Same Place",
+          text: "As we talked, we discovered we were staying at the exact same location! The universe wasn't just dropping hints; it practically shoved us together.",
+          hinglish: "Duniya itni choti hai ya destiny humara peecha kar rahi thi? 🏠✨",
+          icon: "🏠",
+          photo: "Photos and videos/Photo2.jpg",
+          photoCaption: "When we realized we stayed at the same place! 🏠"
+        },
+        {
+          tag: "Our Safe Haven",
+          title: "Malad Wala Ghar & Cooking Experiments",
+          text: "Our absolute favorite cozy spot. Long conversations, making food together, laughing over kitchen disasters, and realizing this is what peace feels like.",
+          hinglish: "Malad wala ghar is pure comfort. Cooking together without burning the flat down! 🍳",
+          icon: "🛋️",
+          photo: "Photos and videos/Photo3.JPG",
+          photoCaption: "Malad wala ghar: our favorite safe space 🛋️✨"
+        },
+        {
+          tag: "The Nightly Ritual",
+          title: "Dinner at Jyoti & The Gate Bodyguard",
+          text: "Every single night dinner at Jyoti. And your sacred promise: picking me up, dropping me home, and patiently standing by the society gate until I reach my flat and wave back.",
+          hinglish: "Jyoti ka dinner and gate par khade hoke wait karna = Pure Bhondu Love! 🍽️🚪",
+          icon: "🍛",
+          photo: "Photos and videos/Photo4.JPG",
+          photoCaption: "Society gate bodyguard on duty 🚪👮‍♂️"
+        },
+        {
+          tag: "Midnight Superhero",
+          title: "Middle-of-the-Night Visits & Flowers",
+          text: "Coming to see me in the dead of the night just because I needed you. Never questioning, always showing up, and bringing flowers that made me blush like crazy.",
+          hinglish: "Whenever I needed you, you were right there. With flowers and that cute smile. 💐🌙",
+          icon: "💐",
+          photo: "Photos and videos/Photo5.JPG",
+          photoCaption: "Bringing me flowers & melting my heart 💐❤️"
+        },
+        {
+          tag: "Game Night Wars",
+          title: "Chidiya Udd & Word Building Championships",
+          text: "Aggressive rounds of Chidiya Udd (where you try to fly cows and dhors) and ruthless word building matches where we fight over fake dictionary words.",
+          hinglish: "Chidiya udd! Dhor udd! Tu nahi udd sakta motuu! 🕊️🔡",
+          icon: "🕊️",
+          photo: "Photos and videos/Photo6.JPG",
+          photoCaption: "Chidiya Udd & Word building masterclass 🕊️📝"
+        }
+      ],
+
+      // Section 4: All 14 Photos with Captions
+      photos: [
+        { src: "Photos and videos/Photo1.JPG", caption: "The beach encounter that changed everything 🌊🔥" },
+        { src: "Photos and videos/Photo2.jpg", caption: "When we realized we were staying at the same place! 🏠" },
+        { src: "Photos and videos/Photo3.JPG", caption: "Malad wala ghar: our favorite safe space 🛋️✨" },
+        { src: "Photos and videos/Photo4.JPG", caption: "Caught being the cutest motuu in existence 🥰" },
+        { src: "Photos and videos/Photo5.JPG", caption: "Every night dinner at Jyoti memories 🍛🍽️" },
+        { src: "Photos and videos/Photo6.JPG", caption: "The boy who waited for me with so much patience ⏳❤️" },
+        { src: "Photos and videos/Photo7.JPG", caption: "Society gate bodyguard on official duty 🚪👮‍♂️" },
+        { src: "Photos and videos/Photo8.JPG", caption: "Bringing me flowers and melting my heart 💐" },
+        { src: "Photos and videos/Photo9.JPG", caption: "Cooking together (or creating beautiful chaos) 👩‍🍳👨‍🍳" },
+        { src: "Photos and videos/Photo10.JPG", caption: "Undisputed champion of annoying me 24/7 🤪" },
+        { src: "Photos and videos/Photo11.JPG", caption: "Chidiya Udd & Word building masterclass 🕊️📝" },
+        { src: "Photos and videos/Photo12.jpg", caption: "The way you look at me makes the world stop 🥺" },
+        { src: "Photos and videos/Photo13.jpg", caption: "I love you more than you love stuffed kulcha! 🫓❤️" },
+        { src: "Photos and videos/Photo14.jpg", caption: "Forever my favorite person in the entire world 💖" }
+      ],
+
+      // Section 5: All 10 Video Memories
+      videos: [
+        { src: "Photos and videos/Video1.MP4", title: "Exhibit A: You Being Irresistibly Adorable 🥺", desc: "Just you melting my heart naturally" },
+        { src: "Photos and videos/Video2.MP4", title: "Exhibit B: Certified Bhondu Energy 🤡", desc: "Caught in 4K being a complete clown" },
+        { src: "Photos and videos/Video3.MP4", title: "Exhibit C: Malad Wala Ghar Diaries 🏡", desc: "Late night laughter and pure cozy vibes" },
+        { src: "Photos and videos/Video4.mov", title: "Exhibit D: Dropping Me Home Ritual 🚗", desc: "The faithful society gate send-off" },
+        { src: "Photos and videos/Video5.MP4", title: "Exhibit E: Jyoti Dinner Shenanigans 🍛", desc: "Our nightly food pilgrimages" },
+        { src: "Photos and videos/Video6.MP4", title: "Exhibit F: Cooking Masterclass (Kinda) 🍳", desc: "Who let us into the kitchen?!" },
+        { src: "Photos and videos/Video7.MP4", title: "Exhibit G: Annoying Me Professional Mode 📸", desc: "His absolute #1 hobby in life" },
+        { src: "Photos and videos/Video8.MP4", title: "Exhibit H: Chidiya Udd Championship 🕊️", desc: "Intense debates over what can fly" },
+        { src: "Photos and videos/Video9.MOV", title: "Exhibit I: Pure Unfiltered Happiness ✨", desc: "The million-dollar smile I fell for" },
+        { src: "Photos and videos/Video extra.MP4", title: "Bonus Reel: My Favorite Human Ever 🎬", desc: "Every single second with you is a gift" }
+      ],
+
+      // Section 6: Reasons I Love You Cards
+      reasons: [
+        {
+          num: "01",
+          icon: "👀",
+          teaser: "The Way You Look At Me",
+          quote: "I love the way your eyes soften whenever you look at me, like I am the only person in a room full of people. 🥺",
+          tag: "Heart Melt Level: 1000%"
+        },
+        {
+          num: "02",
+          icon: "⏳",
+          teaser: "Your Gentle Patience",
+          quote: "You waited for me to fall for you with so much patience, kindness, and deep respect. You never rushed me.",
+          tag: "Patience of a Saint"
+        },
+        {
+          num: "03",
+          icon: "🚪",
+          teaser: "The Society Gate Sentry",
+          quote: "You ALWAYS wait by the society gate until I reach my flat and turn around to wave. My forever protector.",
+          tag: "Faithful Bodyguard"
+        },
+        {
+          num: "04",
+          icon: "🌙",
+          teaser: "Midnight Superhero",
+          quote: "Coming to see me in the dead of the night just because I needed you. You showed up without a second thought.",
+          tag: "Always There For Me"
+        },
+        {
+          num: "05",
+          icon: "🏡",
+          teaser: "Malad Wala Ghar",
+          quote: "Our absolute favorite place. Lounging, talking for hours, and creating a little world that belongs just to us.",
+          tag: "Our Safe Space"
+        },
+        {
+          num: "06",
+          icon: "🍳",
+          teaser: "Cooking Together",
+          quote: "Arguing over spices, making messes, and eating our culinary experiments with big silly grins.",
+          tag: "Masterchefs In Crime"
+        },
+        {
+          num: "07",
+          icon: "🍛",
+          teaser: "Every Night at Jyoti",
+          quote: "Our nightly dinners at Jyoti. Half the joy is the food, the other half is just sitting across from you.",
+          tag: "Our Holy Dining Ritual"
+        },
+        {
+          num: "08",
+          icon: "💐",
+          teaser: "The Surprise Flowers",
+          quote: "Him bringing flowers just to see me smile and blush. You know exactly how to make my entire week.",
+          tag: "Romantic Motuu"
+        },
+        {
+          num: "09",
+          icon: "🤪",
+          teaser: "Annoying Me 24/7",
+          quote: "Annoying me is literally your favorite hobby. You're a certified dhor, but you're MY dhor.",
+          tag: "PhD in Irritation"
+        },
+        {
+          num: "10",
+          icon: "🫓",
+          teaser: "The Stuffed Kulcha Truth",
+          quote: "I know how passionately you worship stuffed kulchas... and I love you EVEN MORE than that. That's a scientific miracle! ❤️",
+          tag: "The Ultimate Sacrificial Love"
+        }
+      ],
+
+      // Section 7: Report Card Data
+      reportCard: [
+        { subject: "Cuteness & Puppy Eyes", score: "100/100", remark: "Illegal levels of adorable", badgeClass: "a-plus" },
+        { subject: "Patience & Respect", score: "1000/100", remark: "God-tier boyfriend material", badgeClass: "a-plus" },
+        { subject: "Society Gate Guard Duty", score: "10/10", remark: "Faithful & unwavering sentry", badgeClass: "a-plus" },
+        { subject: "Annoying Anshita Skill", score: "9999%", remark: "Overqualified nuisance 💀", badgeClass: "danger" },
+        { subject: "Stuffed Kulcha Devotion", score: "100/100", remark: "Would trade kingdom for kulcha", badgeClass: "a-plus" },
+        { subject: "Chidiya Udd Reflexes", score: "404", remark: "Thinks cows can fly 🕊️🐮", badgeClass: "danger" }
+      ],
+
+      // Section 7: Pickup Lines
+      pickupLines: [
+        "Are you a matchstick on that beach? Because you ignited my whole world 🔥",
+        "Abhay, tu dhor hai par mera sabse pyaara dhor hai ❤️",
+        "I love you more than you love Amritsari stuffed kulcha, and that is mathematically impossible 🫓",
+        "Is your name Jyoti? Because every night I just want to end up with you 🍛",
+        "Are you my society gate? Because I never want to leave without looking at you 🚪🥺",
+        "Chidiya udd, dhor udd... par mera dil sirf tere paas udd ke aata hai 🕊️💖",
+        "You waited for me to fall for you, and honestly? Best trap I ever walked into."
+      ],
+
+      // Section 10: Final Love Letter Lines (First time saying "I love you"!)
+      loveLetter: [
+        "Abhay,",
+        "From the moment a random guy came and sat next to me on that beach, asking for a lighter and handing me a matchstick... something shifted.",
+        "You didn't just share a spark that day; you brought warmth, laughter, and light into every corner of my life.",
+        "You waited for me with so much patience and gentle respect. You showed up at the society gate every single night just to see me reach my flat safely. You drove across the city in the middle of the night just because I needed you.",
+        "From lazy evenings at Malad wala ghar to nightly dinners at Jyoti, from our chaotic cooking experiments to screaming over Chidiya Udd and word building...",
+        "You annoy me more than anyone on earth (you truly are my favorite dhor and motuu), but you have also become my absolute safe place.",
+        "And even though you love stuffed kulcha with your entire soul... I need you to know that I love you a thousand times more than that.",
+        "I have kept these words inside my heart for so long, but today, I want to say them clearly and boldly for the very first time:",
+        "I love you, Abhay. Forever and always. ❤️"
+      ]
+    };
+
+    /* ==========================================================================
+       SOUND ENGINE (Web Audio API Synthesizer - Zero External Files Required!)
+       ========================================================================== */
+    class CuteSoundEngine {
+      constructor() {
+        this.ctx = null;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) this.ctx = new AudioContext();
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      }
+      pop() {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(450, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(880, this.ctx.currentTime + 0.08);
+          gain.gain.setValueAtTime(0.2, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.08);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.08);
+        } catch (e) {}
+      }
+      chime() {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, this.ctx.currentTime + i * 0.06);
+            gain.gain.setValueAtTime(0.15, this.ctx.currentTime + i * 0.06);
+            gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + i * 0.06 + 0.25);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(this.ctx.currentTime + i * 0.06);
+            osc.stop(this.ctx.currentTime + i * 0.06 + 0.25);
+          });
+        } catch (e) {}
+      }
+      fanfare() {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const notes = [440, 554.37, 659.25, 880];
+          notes.forEach((freq, idx) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, this.ctx.currentTime + idx * 0.1);
+            gain.gain.setValueAtTime(0.2, this.ctx.currentTime + idx * 0.1);
+            gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + idx * 0.1 + 0.4);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(this.ctx.currentTime + idx * 0.1);
+            osc.stop(this.ctx.currentTime + idx * 0.1 + 0.4);
+          });
+        } catch (e) {}
+      }
+    }
+    const sounds = new CuteSoundEngine();
+
+    /* ==========================================================================
+       CONFETTI & HEART BURST ENGINE (Canvas-based)
+       ========================================================================== */
+    const confettiCanvas = document.getElementById('confetti-canvas');
+    const confettiCtx = confettiCanvas.getContext('2d');
+    let confettiParticles = [];
+    let confettiActive = false;
+
+    function resizeCanvases() {
+      confettiCanvas.width = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvases);
+    resizeCanvases();
+
+    function triggerConfetti(originX = window.innerWidth / 2, originY = window.innerHeight / 2, count = 75) {
+      sounds.fanfare();
+      const colors = ['#ff4d6d', '#ff758f', '#ffccd5', '#ffd166', '#a29bfe', '#d8f3dc'];
+      const shapes = ['circle', 'rect', 'heart'];
+
+      for (let i = 0; i < count; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 9 + 4;
+        confettiParticles.push({
+          x: originX,
+          y: originY,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed - Math.random() * 4,
+          size: Math.random() * 10 + 6,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          shape: shapes[Math.floor(Math.random() * shapes.length)],
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 12,
+          gravity: 0.18,
+          alpha: 1,
+          decay: Math.random() * 0.015 + 0.008
+        });
+      }
+
+      if (!confettiActive) {
+        confettiActive = true;
+        renderConfetti();
+      }
+    }
+
+    function renderConfetti() {
+      confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      for (let i = confettiParticles.length - 1; i >= 0; i--) {
+        const p = confettiParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.rotation += p.rotationSpeed;
+        p.alpha -= p.decay;
+
+        if (p.alpha <= 0 || p.y > confettiCanvas.height + 50) {
+          confettiParticles.splice(i, 1);
+          continue;
+        }
+
+        confettiCtx.save();
+        confettiCtx.globalAlpha = p.alpha;
+        confettiCtx.translate(p.x, p.y);
+        confettiCtx.rotate((p.rotation * Math.PI) / 180);
+        confettiCtx.fillStyle = p.color;
+
+        if (p.shape === 'circle') {
+          confettiCtx.beginPath();
+          confettiCtx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+          confettiCtx.fill();
+        } else if (p.shape === 'rect') {
+          confettiCtx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+        } else if (p.shape === 'heart') {
+          confettiCtx.font = `${p.size * 1.4}px serif`;
+          confettiCtx.textAlign = 'center';
+          confettiCtx.textBaseline = 'middle';
+          confettiCtx.fillText('❤️', 0, 0);
+        }
+        confettiCtx.restore();
+      }
+
+      if (confettiParticles.length > 0) {
+        requestAnimationFrame(renderConfetti);
+      } else {
+        confettiActive = false;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION 1: LOADING SCREEN LOGIC
+       ========================================================================== */
+    const loadingScreen = document.getElementById('loading-screen');
+    const loaderMsg = document.getElementById('loaderMsg');
+    const progressFill = document.getElementById('progressFill');
+    const progressPct = document.getElementById('progressPct');
+    const loaderBtnWrap = document.getElementById('loaderBtnWrap');
+    const enterBtn = document.getElementById('enterBtn');
+
+    const loaderStages = [
+      { pct: 24, msg: "Locating the beach where we first spoke... 🌊" },
+      { pct: 52, msg: "Gathering matchsticks & stuffed kulchas... 🫓🔥" },
+      { pct: 78, msg: "Standing guard at the society gate... 🚪🥺" },
+      { pct: 99, msg: "99%... just kidding, Anshita's love is infinite! 💕" },
+      { pct: 100, msg: "Ready for Abhay! Tap below to open 🎁" }
+    ];
+
+    let currentStage = 0;
+    function advanceLoader() {
+      if (currentStage >= loaderStages.length) return;
+      const stage = loaderStages[currentStage];
+      progressFill.style.width = stage.pct + '%';
+      progressPct.textContent = stage.pct + '%';
+      loaderMsg.textContent = stage.msg;
+      sounds.pop();
+
+      if (stage.pct === 100) {
+        loaderBtnWrap.style.display = 'block';
+        return;
+      }
+      currentStage++;
+      const nextDelay = currentStage === 3 ? 1200 : 700;
+      setTimeout(advanceLoader, nextDelay);
+    }
+    setTimeout(advanceLoader, 400);
+
+    enterBtn.addEventListener('click', () => {
+      sounds.chime();
+      triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 80);
+      loadingScreen.classList.add('loaded');
+      tryPlayAudio();
+    });
+
+    /* ==========================================================================
+       AUDIO CONTROLLER
+       ========================================================================== */
+    const bgAudio = document.getElementById('bgAudio');
+    const musicToggleBtn = document.getElementById('musicToggleBtn');
+    const musicIcon = document.getElementById('musicIcon');
+    const musicTooltip = document.getElementById('musicTooltip');
+    let isPlayingAudio = false;
+
+    function tryPlayAudio() {
+      bgAudio.play().then(() => {
+        isPlayingAudio = true;
+        musicToggleBtn.classList.add('playing');
+        musicIcon.textContent = '⏸️';
+        musicTooltip.textContent = 'Pause Music 🎵';
+      }).catch(err => {
+        // Autoplay policy or missing file
+        isPlayingAudio = false;
+        musicToggleBtn.classList.remove('playing');
+        musicIcon.textContent = '🎵';
+      });
+    }
+
+    musicToggleBtn.addEventListener('click', () => {
+      sounds.pop();
+      if (!isPlayingAudio) {
+        bgAudio.play().then(() => {
+          isPlayingAudio = true;
+          musicToggleBtn.classList.add('playing');
+          musicIcon.textContent = '⏸️';
+          musicTooltip.textContent = 'Pause Music 🎵';
+        }).catch(err => {
+          musicTooltip.textContent = 'Add song to assets/song.mp3! 🎵';
+          setTimeout(() => {
+            musicTooltip.textContent = 'Play our song 🎵';
+          }, 3500);
+        });
+      } else {
+        bgAudio.pause();
+        isPlayingAudio = false;
+        musicToggleBtn.classList.remove('playing');
+        musicIcon.textContent = '🎵';
+        musicTooltip.textContent = 'Play our song 🎵';
+      }
+    });
+
+    /* ==========================================================================
+       SECTION 2: HERO SETUP & DAYS CALCULATOR
+       ========================================================================== */
+    document.getElementById('heroName').textContent = CONFIG.couple.boyfriendName;
+    document.getElementById('heroDateBadge').textContent = CONFIG.couple.anniversaryFormatted;
+
+    function calculateDays() {
+      const anniv = new Date(CONFIG.couple.anniversaryDate);
+      const today = new Date();
+      const diffTime = today - anniv;
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      const badge = document.getElementById('heroDaysBadge');
+      if (diffDays >= 0) {
+        badge.textContent = diffDays + ' Days';
+      } else {
+        // Milestone or future date reference
+        badge.textContent = 'Every Single Day';
+      }
+    }
+    calculateDays();
+
+    document.getElementById('heroOpenBtn').addEventListener('click', (e) => {
+      sounds.chime();
+      const rect = e.target.getBoundingClientRect();
+      triggerConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2, 60);
+    });
+
+    /* ==========================================================================
+       SECTION 3: TIMELINE RENDERING
+       ========================================================================== */
+    const timelineContainer = document.getElementById('timelineContainer');
+    CONFIG.timeline.forEach((item, index) => {
+      const timelineItem = document.createElement('div');
+      timelineItem.className = 'timeline-item';
+      
+      const tapeColorStory = index % 2 === 0 ? 'pink' : 'lavender';
+      const tapeColorPhoto = index % 2 === 0 ? 'yellow' : 'mint';
+
+      timelineItem.innerHTML = `
+        <div class="timeline-node" title="${item.title}">${item.icon}</div>
+        
+        <!-- Story Column -->
+        <div class="timeline-col timeline-col-story">
+          <div class="timeline-card">
+            <div class="washi-tape ${tapeColorStory}"></div>
+            <span class="timeline-tag">${item.tag}</span>
+            <h3 class="timeline-heading">${item.title}</h3>
+            <p class="timeline-text">${item.text}</p>
+            <span class="timeline-hinglish">${item.hinglish}</span>
+          </div>
+        </div>
+
+        <!-- Photo Column -->
+        <div class="timeline-col timeline-col-photo">
+          <div class="timeline-polaroid-card" role="button" tabindex="0" aria-label="Zoom in on ${item.title} photo" data-photo-idx="${index}">
+            <div class="polaroid-tape ${tapeColorPhoto}"></div>
+            <div class="timeline-polaroid-img-wrap">
+              <img src="${encodeURI(item.photo)}" alt="${item.title}" loading="lazy">
+              <div class="timeline-zoom-pill">🔍 Tap to Zoom</div>
+            </div>
+            <div class="timeline-polaroid-caption">${item.photoCaption || item.title}</div>
+          </div>
+        </div>
+      `;
+
+      // Connect Chapter 1 photo tap to Lightbox modal
+      const polaroidCard = timelineItem.querySelector('.timeline-polaroid-card');
+      if (polaroidCard) {
+        polaroidCard.addEventListener('click', () => {
+          openLightbox(index);
+        });
+        polaroidCard.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openLightbox(index);
+          }
+        });
+      }
+
+      timelineContainer.appendChild(timelineItem);
+    });
+
+    /* ==========================================================================
+       SECTION 4: PHOTO GALLERY & LIGHTBOX
+       ========================================================================== */
+    const polaroidGrid = document.getElementById('polaroidGrid');
+    const lightboxModal = document.getElementById('lightboxModal') || document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    let currentPhotoIndex = 0;
+
+    CONFIG.photos.forEach((photo, idx) => {
+      const card = document.createElement('div');
+      card.className = 'polaroid-card';
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', `View photo: ${photo.caption}`);
+      card.innerHTML = `
+        <div class="polaroid-tape"></div>
+        <div class="polaroid-img-wrap">
+          <img src="${encodeURI(photo.src)}" alt="${photo.caption}" loading="lazy">
+        </div>
+        <div class="polaroid-caption">${photo.caption}</div>
+      `;
+
+      card.addEventListener('click', () => openLightbox(idx));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(idx);
+        }
+      });
+      polaroidGrid.appendChild(card);
+    });
+
+    function openLightbox(index) {
+      sounds.pop();
+      currentPhotoIndex = index;
+      updateLightboxContent();
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      sounds.pop();
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightboxContent() {
+      const item = CONFIG.photos[currentPhotoIndex];
+      lightboxImg.src = encodeURI(item.src);
+      lightboxCaption.textContent = item.caption;
+      lightboxCounter.textContent = `Memory ${currentPhotoIndex + 1} of ${CONFIG.photos.length}`;
+    }
+
+    function nextPhoto() {
+      sounds.pop();
+      currentPhotoIndex = (currentPhotoIndex + 1) % CONFIG.photos.length;
+      updateLightboxContent();
+    }
+
+    function prevPhoto() {
+      sounds.pop();
+      currentPhotoIndex = (currentPhotoIndex - 1 + CONFIG.photos.length) % CONFIG.photos.length;
+      updateLightboxContent();
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxNext.addEventListener('click', nextPhoto);
+    lightboxPrev.addEventListener('click', prevPhoto);
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+
+    // Keyboard support for Lightbox
+    window.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextPhoto();
+      if (e.key === 'ArrowLeft') prevPhoto();
+    });
+
+    // Touch swipe support for Lightbox
+    let touchStartX = 0;
+    let touchEndX = 0;
+    lightboxModal.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightboxModal.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchEndX < touchStartX - 50) nextPhoto();
+      if (touchEndX > touchStartX + 50) prevPhoto();
+    }, { passive: true });
+
+    /* ==========================================================================
+       SECTION 5: VIDEO CAROUSEL
+       ========================================================================== */
+    const videoSlider = document.getElementById('videoSlider');
+    const videoPrevBtn = document.getElementById('videoPrevBtn');
+    const videoNextBtn = document.getElementById('videoNextBtn');
+
+    CONFIG.videos.forEach((vid, i) => {
+      const card = document.createElement('div');
+      card.className = 'video-card';
+      card.innerHTML = `
+        <div class="video-media-wrap">
+          <video src="${encodeURI(vid.src)}" preload="metadata" playsinline muted loop></video>
+          <div class="video-play-overlay">▶</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">${vid.title}</div>
+          <div class="video-desc">${vid.desc}</div>
+        </div>
+      `;
+
+      const videoEl = card.querySelector('video');
+      const overlay = card.querySelector('.video-play-overlay');
+
+      const togglePlay = () => {
+        sounds.pop();
+        if (videoEl.paused) {
+          // Pause other playing videos to preserve memory & bandwidth
+          document.querySelectorAll('.video-slider video').forEach(v => {
+            if (v !== videoEl && !v.paused) {
+              v.pause();
+              v.parentElement.querySelector('.video-play-overlay')?.classList.remove('hidden');
+            }
+          });
+          videoEl.play();
+          overlay.classList.add('hidden');
+        } else {
+          videoEl.pause();
+          overlay.classList.remove('hidden');
+        }
+      };
+
+      overlay.addEventListener('click', togglePlay);
+      videoEl.addEventListener('click', togglePlay);
+
+      videoSlider.appendChild(card);
+    });
+
+    videoPrevBtn.addEventListener('click', () => {
+      sounds.pop();
+      videoSlider.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+    videoNextBtn.addEventListener('click', () => {
+      sounds.pop();
+      videoSlider.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+
+    /* ==========================================================================
+       SECTION 6: REASONS I LOVE YOU (PICK-A-CARD)
+       ========================================================================== */
+    const reasonsGrid = document.getElementById('reasonsGrid');
+    CONFIG.reasons.forEach((r, idx) => {
+      const card = document.createElement('div');
+      card.className = 'flip-card';
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', `Reason ${r.num}: ${r.teaser}`);
+      card.innerHTML = `
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="washi-tape yellow"></div>
+            <div class="card-number">REASON #${r.num}</div>
+            <div class="card-icon">${r.icon}</div>
+            <div class="card-teaser">${r.teaser}</div>
+            <div class="card-hint">Tap to flip 💫</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="washi-tape pink"></div>
+            <div class="reason-quote">"${r.quote}"</div>
+            <div class="reason-tag">${r.tag}</div>
+          </div>
+        </div>
+      `;
+
+      const toggleFlip = () => {
+        sounds.chime();
+        card.classList.toggle('flipped');
+      };
+
+      card.addEventListener('click', toggleFlip);
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleFlip();
+        }
+      });
+
+      reasonsGrid.appendChild(card);
+    });
+
+    /* ==========================================================================
+       SECTION 7: CRINGE CORNER LOGIC
+       ========================================================================== */
+    // 1. Report Card
+    const reportTableBody = document.getElementById('reportTableBody');
+    CONFIG.reportCard.forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${row.subject}</td>
+        <td><span class="grade-badge ${row.badgeClass}">${row.score}</span></td>
+        <td>${row.remark}</td>
+      `;
+      reportTableBody.appendChild(tr);
+    });
+
+    // 2. Pickup Line Generator
+    const pickupDisplay = document.getElementById('pickupDisplay');
+    const newPickupBtn = document.getElementById('newPickupBtn');
+    let pickupIndex = 0;
+
+    newPickupBtn.addEventListener('click', () => {
+      sounds.pop();
+      pickupIndex = (pickupIndex + 1) % CONFIG.pickupLines.length;
+      pickupDisplay.style.opacity = '0';
+      setTimeout(() => {
+        pickupDisplay.textContent = `"${CONFIG.pickupLines[pickupIndex]}"`;
+        pickupDisplay.style.opacity = '1';
+      }, 150);
+    });
+
+    // 3. Compatibility Calculator
+    const calcBtn = document.getElementById('calcBtn');
+    const calcResult = document.getElementById('calcResult');
+
+    calcBtn.addEventListener('click', () => {
+      sounds.fanfare();
+      calcResult.textContent = 'Recalibrating Stuffed Kulchas... ⏳';
+      setTimeout(() => {
+        calcResult.textContent = '1000% MATCH! Soulmates Verified 💍❤️';
+        triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 50);
+      }, 700);
+    });
+
+    /* ==========================================================================
+       SECTION 8: MINI GAME (CATCH THE HEARTS & KULCHAS)
+       ========================================================================== */
+    const gameCanvas = document.getElementById('gameCanvas');
+    const gameCtx = gameCanvas.getContext('2d');
+    const gameCanvasBox = document.getElementById('gameCanvasBox');
+    const gameScoreEl = document.getElementById('gameScore');
+    const gameTimeEl = document.getElementById('gameTime');
+    const gameHighScoreEl = document.getElementById('gameHighScore');
+    const gameOverlay = document.getElementById('gameOverlay');
+    const startGameBtn = document.getElementById('startGameBtn');
+    const gameOverTitle = document.getElementById('gameOverTitle');
+    const gameOverMsg = document.getElementById('gameOverMsg');
+
+    let gameActive = false;
+    let gameScore = 0;
+    let gameHighScore = 0;
+    let gameTimeRemaining = 30;
+    let gameInterval = null;
+    let spawnTimer = 0;
+    let items = [];
+    let basket = { x: 150, width: 80, height: 26, emoji: '🧺' };
+
+    function fitGameCanvas() {
+      const rect = gameCanvasBox.getBoundingClientRect();
+      gameCanvas.width = rect.width;
+      gameCanvas.height = rect.height;
+      basket.y = gameCanvas.height - 35;
+      if (basket.x > gameCanvas.width - basket.width) {
+        basket.x = gameCanvas.width / 2 - basket.width / 2;
+      }
+    }
+    window.addEventListener('resize', fitGameCanvas);
+    fitGameCanvas();
+
+    // Player Movement
+    function moveBasket(clientX) {
+      const rect = gameCanvas.getBoundingClientRect();
+      const relativeX = clientX - rect.left;
+      basket.x = Math.max(0, Math.min(gameCanvas.width - basket.width, relativeX - basket.width / 2));
+    }
+
+    gameCanvas.addEventListener('mousemove', (e) => {
+      if (gameActive) moveBasket(e.clientX);
+    });
+
+    gameCanvas.addEventListener('touchmove', (e) => {
+      if (gameActive && e.touches[0]) {
+        moveBasket(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    window.addEventListener('keydown', (e) => {
+      if (!gameActive) return;
+      if (e.key === 'ArrowLeft') basket.x = Math.max(0, basket.x - 24);
+      if (e.key === 'ArrowRight') basket.x = Math.min(gameCanvas.width - basket.width, basket.x + 24);
+    });
+
+    function spawnGameItem() {
+      const rand = Math.random();
+      let type, emoji, points, speed;
+
+      if (rand < 0.5) {
+        // Red / Pink Heart
+        type = 'heart';
+        emoji = '❤️';
+        points = 10;
+        speed = Math.random() * 2 + 2.5;
+      } else if (rand < 0.72) {
+        // Stuffed Kulcha jackpot!
+        type = 'kulcha';
+        emoji = '🫓';
+        points = 50;
+        speed = Math.random() * 2.5 + 3.2;
+      } else if (rand < 0.88) {
+        // Matchstick bonus
+        type = 'matchstick';
+        emoji = '🔥';
+        points = 20;
+        speed = Math.random() * 2 + 2.8;
+      } else {
+        // Broken heart bomb
+        type = 'broken';
+        emoji = '💔';
+        points = -15;
+        speed = Math.random() * 1.5 + 2.2;
+      }
+
+      items.push({
+        x: Math.random() * (gameCanvas.width - 35) + 15,
+        y: -30,
+        size: 30,
+        type,
+        emoji,
+        points,
+        speed
+      });
+    }
+
+    function runGameLoop() {
+      if (!gameActive) return;
+
+      gameCtx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+      // Draw Basket
+      gameCtx.font = '36px sans-serif';
+      gameCtx.textAlign = 'center';
+      gameCtx.textBaseline = 'middle';
+      gameCtx.fillText(basket.emoji, basket.x + basket.width / 2, basket.y);
+
+      // Spawn items
+      spawnTimer++;
+      if (spawnTimer % 28 === 0) spawnGameItem();
+
+      // Update & Draw items
+      for (let i = items.length - 1; i >= 0; i--) {
+        const item = items[i];
+        item.y += item.speed;
+
+        gameCtx.font = '28px sans-serif';
+        gameCtx.fillText(item.emoji, item.x, item.y);
+
+        // Collision check
+        if (
+          item.y + 15 >= basket.y - 10 &&
+          item.y - 15 <= basket.y + basket.height &&
+          item.x >= basket.x - 10 &&
+          item.x <= basket.x + basket.width + 10
+        ) {
+          gameScore = Math.max(0, gameScore + item.points);
+          gameScoreEl.textContent = gameScore;
+          if (item.points > 0) sounds.pop();
+          items.splice(i, 1);
+          continue;
+        }
+
+        if (item.y > gameCanvas.height + 30) {
+          items.splice(i, 1);
+        }
+      }
+
+      requestAnimationFrame(runGameLoop);
+    }
+
+    function startGame() {
+      sounds.chime();
+      fitGameCanvas();
+      gameActive = true;
+      gameScore = 0;
+      gameTimeRemaining = 30;
+      items = [];
+      gameScoreEl.textContent = '0';
+      gameTimeEl.textContent = '30s';
+      gameOverlay.classList.add('hidden');
+
+      clearInterval(gameInterval);
+      gameInterval = setInterval(() => {
+        gameTimeRemaining--;
+        gameTimeEl.textContent = gameTimeRemaining + 's';
+        if (gameTimeRemaining <= 0) {
+          endGame();
+        }
+      }, 1000);
+
+      runGameLoop();
+    }
+
+    function endGame() {
+      gameActive = false;
+      clearInterval(gameInterval);
+      sounds.fanfare();
+
+      if (gameScore > gameHighScore) {
+        gameHighScore = gameScore;
+        gameHighScoreEl.textContent = gameHighScore;
+      }
+
+      gameOverTitle.textContent = "Time's Up! 💖";
+      gameOverMsg.textContent = `You scored ${gameScore} points! You caught all of Anshita's love and enough stuffed kulchas for a lifetime 🥰`;
+      startGameBtn.textContent = 'Play Again 🎮';
+      gameOverlay.classList.remove('hidden');
+      triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 70);
+    }
+
+    startGameBtn.addEventListener('click', startGame);
+
+    /* ==========================================================================
+       SECTION 9: "WILL YOU ..." FINALE & RUNAWAY NO BUTTON
+       ========================================================================== */
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const proposalQuestionBox = document.getElementById('proposalQuestionBox');
+    const proposalSuccessBox = document.getElementById('proposalSuccessBox');
+    const proposalBtnZone = document.getElementById('proposalBtnZone');
+
+    const runawayQuotes = [
+      "Are you sure? 🥺",
+      "Think about the stuffed kulchas! 🫓",
+      "Bhondu, try again! 🤡",
+      "Dhor, you have zero choice! 😤",
+      "Society gate guard duty cancelled?! 🚪",
+      "Wrong button motuu! ❤️",
+      "Error 404: 'No' does not exist in our vocabulary ✨"
+    ];
+    let quoteIndex = 0;
+    let yesScale = 1;
+
+    function dodgeNoButton(e) {
+      e.preventDefault();
+      sounds.pop();
+
+      // Enlarge the YES button
+      yesScale = Math.min(2.4, yesScale + 0.15);
+      yesBtn.style.transform = `scale(${yesScale})`;
+
+      // Change text of NO button
+      noBtn.textContent = runawayQuotes[quoteIndex];
+      quoteIndex = (quoteIndex + 1) % runawayQuotes.length;
+
+      // Calculate bounded random position within the button zone
+      const zoneRect = proposalBtnZone.getBoundingClientRect();
+      const btnRect = noBtn.getBoundingClientRect();
+
+      const maxX = zoneRect.width - btnRect.width - 20;
+      const maxY = zoneRect.height - btnRect.height - 10;
+
+      const randomX = (Math.random() - 0.5) * maxX;
+      const randomY = (Math.random() - 0.5) * maxY;
+
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = `calc(50% + ${randomX}px)`;
+      noBtn.style.top = `calc(50% + ${randomY}px)`;
+      noBtn.style.transform = `translate(-50%, -50%) rotate(${(Math.random() - 0.5) * 20}deg)`;
+    }
+
+    noBtn.addEventListener('mouseenter', dodgeNoButton);
+    noBtn.addEventListener('touchstart', dodgeNoButton, { passive: false });
+    noBtn.addEventListener('click', dodgeNoButton);
+
+    yesBtn.addEventListener('click', () => {
+      sounds.fanfare();
+      triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 120);
+      proposalQuestionBox.style.display = 'none';
+      proposalSuccessBox.style.display = 'block';
+    });
+
+    /* ==========================================================================
+       SECTION 10: TYPEWRITER LOVE LETTER
+       ========================================================================== */
+    const letterBody = document.getElementById('letterBody');
+    const celebrateBtn = document.getElementById('celebrateBtn');
+    let letterRevealed = false;
+
+    function streamLoveLetter() {
+      if (letterRevealed) return;
+      letterRevealed = true;
+
+      const paragraphs = CONFIG.loveLetter;
+      let pIdx = 0;
+      let charIdx = 0;
+      letterBody.innerHTML = '';
+
+      let currentP = document.createElement('p');
+      currentP.style.marginBottom = '18px';
+      letterBody.appendChild(currentP);
+
+      function typeChar() {
+        if (pIdx >= paragraphs.length) {
+          triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 90);
+          return;
+        }
+
+        const text = paragraphs[pIdx];
+        if (charIdx < text.length) {
+          currentP.textContent += text[charIdx];
+          charIdx++;
+          // Highlighting special "I love you" milestone
+          if (text.includes("I love you, Abhay")) {
+            currentP.className = 'letter-milestone-highlight';
+          }
+          setTimeout(typeChar, 24);
+        } else {
+          pIdx++;
+          charIdx = 0;
+          if (pIdx < paragraphs.length) {
+            currentP = document.createElement('p');
+            currentP.style.marginBottom = '18px';
+            letterBody.appendChild(currentP);
+            setTimeout(typeChar, 250);
+          } else {
+            triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 100);
+          }
+        }
+      }
+      typeChar();
+    }
+
+    // Trigger typewriter when letter scrolls into view
+    const letterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          streamLoveLetter();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    const letterSection = document.getElementById('letter');
+    if (letterSection) letterObserver.observe(letterSection);
+
+    celebrateBtn.addEventListener('click', () => {
+      sounds.fanfare();
+      triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 120);
+      triggerConfetti(window.innerWidth * 0.25, window.innerHeight * 0.4, 60);
+      triggerConfetti(window.innerWidth * 0.75, window.innerHeight * 0.4, 60);
+    });
+
+    /* ==========================================================================
+       EASTER EGGS
+       ========================================================================== */
+    // Easter Egg 1: Tapping logo 5 times unlocks secret vault
+    let logoTaps = 0;
+    const easterEggLogo = document.getElementById('easterEggLogo');
+    const secretModal = document.getElementById('secretModal');
+    const closeSecretBtn = document.getElementById('closeSecretBtn');
+
+    easterEggLogo.addEventListener('click', () => {
+      sounds.pop();
+      logoTaps++;
+      if (logoTaps >= 5) {
+        logoTaps = 0;
+        sounds.fanfare();
+        secretModal.classList.add('active');
+        triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 80);
+      }
+    });
+
+    closeSecretBtn.addEventListener('click', () => {
+      sounds.pop();
+      secretModal.classList.remove('active');
+    });
+
+    // Easter Egg 2: Typing "iloveyou" triggers a screen-wide heart explosion
+    let typedKeys = '';
+    window.addEventListener('keydown', (e) => {
+      typedKeys += e.key.toLowerCase();
+      if (typedKeys.length > 10) typedKeys = typedKeys.slice(-10);
+      if (typedKeys.includes('iloveyou')) {
+        typedKeys = '';
+        sounds.fanfare();
+        triggerConfetti(window.innerWidth / 2, window.innerHeight / 2, 150);
+      }
+    });
+
+    /* ==========================================================================
+       CURSOR SPARKLES & TOUCH TRAIL
+       ========================================================================== */
+    const sparkleCanvas = document.getElementById('sparkle-canvas');
+    const sparkleCtx = sparkleCanvas.getContext('2d');
+    let sparkles = [];
+
+    function resizeSparkleCanvas() {
+      sparkleCanvas.width = window.innerWidth;
+      sparkleCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeSparkleCanvas);
+    resizeSparkleCanvas();
+
+    function addSparkle(x, y) {
+      const colors = ['#ff4d6d', '#ff758f', '#ffccd5', '#ffd166', '#a29bfe'];
+      sparkles.push({
+        x: x,
+        y: y,
+        size: Math.random() * 5 + 3,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: 1,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: (Math.random() - 0.5) * 1.5 - 0.5,
+        life: Math.random() * 0.03 + 0.02
+      });
+    }
+
+    window.addEventListener('mousemove', (e) => {
+      if (Math.random() > 0.45) addSparkle(e.clientX, e.clientY);
+    });
+
+    window.addEventListener('touchstart', (e) => {
+      if (e.touches[0]) {
+        for (let i = 0; i < 6; i++) addSparkle(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    function animateSparkles() {
+      sparkleCtx.clearRect(0, 0, sparkleCanvas.width, sparkleCanvas.height);
+      for (let i = sparkles.length - 1; i >= 0; i--) {
+        const s = sparkles[i];
+        s.x += s.vx;
+        s.y += s.vy;
+        s.alpha -= s.life;
+
+        if (s.alpha <= 0) {
+          sparkles.splice(i, 1);
+          continue;
+        }
+
+        sparkleCtx.save();
+        sparkleCtx.globalAlpha = s.alpha;
+        sparkleCtx.fillStyle = s.color;
+        sparkleCtx.beginPath();
+        sparkleCtx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        sparkleCtx.fill();
+        sparkleCtx.restore();
+      }
+      requestAnimationFrame(animateSparkles);
+    }
+    animateSparkles();
+  </script>
+</body>
+</html>
