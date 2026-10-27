@@ -1182,15 +1182,23 @@
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 28px 24px;
       margin-top: 45px;
     }
 
     .flip-card {
       background-color: transparent;
-      height: 230px;
-      perspective: 1000px;
+      height: 250px;
+      perspective: 1200px;
+      -webkit-perspective: 1200px;
       cursor: pointer;
+      position: relative;
+      user-select: none;
+      transition: transform 0.25s ease;
+    }
+
+    .flip-card:hover {
+      transform: translateY(-4px);
     }
 
     .flip-card-inner {
@@ -1198,23 +1206,31 @@
       width: 100%;
       height: 100%;
       text-align: center;
-      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
       transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      transform-origin: center center;
+      -webkit-transform-origin: center center;
     }
 
     .flip-card.flipped .flip-card-inner {
       transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
     }
 
     .flip-card-front, .flip-card-back {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      box-sizing: border-box;
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       border-radius: var(--radius-md);
       border: 3px solid #2b1e23;
       box-shadow: 5px 6px 0px #2b1e23;
-      padding: 24px 20px;
+      padding: 24px 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1223,7 +1239,9 @@
 
     .flip-card-front {
       background: #ffffff;
-      position: relative;
+      transform: rotateY(0deg);
+      -webkit-transform: rotateY(0deg);
+      z-index: 2;
     }
 
     .flip-card-front .card-number {
@@ -1237,8 +1255,8 @@
 
     .flip-card-front .card-icon {
       font-size: 3rem;
-      margin-bottom: 12px;
-      transition: transform 0.3s ease;
+      margin-bottom: 10px;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     .flip-card:hover .flip-card-front .card-icon {
@@ -1250,6 +1268,7 @@
       font-size: 1.25rem;
       font-weight: 700;
       color: var(--text-main);
+      line-height: 1.25;
     }
 
     .flip-card-front .card-hint {
@@ -1262,15 +1281,29 @@
     .flip-card-back {
       background: #ffe5ec;
       transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
       border-color: #ff4d6d;
+      box-shadow: -5px 6px 0px #2b1e23;
+      z-index: 1;
+    }
+
+    .flip-card.flipped .flip-card-back {
+      z-index: 3;
+    }
+    .flip-card.flipped .flip-card-front {
+      z-index: 1;
     }
 
     .flip-card-back .reason-quote {
       font-family: var(--font-hand);
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: #590d22;
       line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .flip-card-back .reason-tag {
@@ -2219,7 +2252,7 @@
           text: "A random guy came and sat next to me on a beach. I looked at him and asked if he had a lighter... but he smiled and pulled out a single matchstick. That tiny flame started a conversation that never ended.",
           hinglish: "Lighter maanga tha, matchstick mili... aur wahi se spark shuru ho gaya! 🔥",
           icon: "🔥",
-          photo: "Photos and videos/Photo8(Beach encounter with stranger).JPG",
+          photo: "Photos and videos/Varsova beach.jpg",
           photoCaption: "The beach encounter that started it all 🌊🔥"
         },
         {
@@ -2229,7 +2262,7 @@
           hinglish: "Duniya itni choti hai ya destiny humara peecha kar rahi thi? 🏠✨",
           icon: "🏠",
           photo: "Photos and videos/Photo2 (Turns Out We Stayed At The Same Place).jpg",
-          photoCaption: "When we realized we stayed at the same place! 🏠"
+          photoCaption: "The day I actually realized what my actual smile is!! 🏠"
         },
         {
           tag: "Our Safe Haven",
@@ -2255,36 +2288,37 @@
           text: "Coming to see me in the dead of the night just because I needed you. Never questioning, always showing up, and bringing flowers that made me blush like crazy.",
           hinglish: "Whenever I needed you, you were right there. With flowers and that cute smile. 💐🌙",
           icon: "💐",
-          photo: "Photos and videos/Photo11 (Middle-of-the-Night Visits & Flowers).JPG",
+          photo: "Photos and videos/Photo8(Beach encounter with stranger).JPG",
           photoCaption: "Bringing me flowers & melting my heart 💐❤️"
         },
         {
           tag: "Game Night Wars",
           title: "Chidiya Udd & Word Building Championships",
-          text: "Aggressive rounds of Chidiya Udd (where you try to fly cows and dhors) and ruthless word building matches where we fight over fake dictionary words.",
+          text: "Aggressive rounds of Chidiya Udd and ruthless word building matches where we fight over fake dictionary words and endless bakchodis.",
           hinglish: "Chidiya udd! Dhor udd! Tu nahi udd sakta motuu! 🕊️🔡",
           icon: "🕊️",
           photo: "Photos and videos/Photo9 (Chidiya Udd & Word Building Championships).JPG",
-          photoCaption: "Chidiya Udd & Word building masterclass 🕊️📝"
+          photoCaption: "Anshita's Property 🕊️📝"
         }
       ],
 
       // Section 4: All Photos with Captions
       photos: [
-        { src: "Photos and videos/Photo8(Beach encounter with stranger).JPG", caption: "The beach encounter that changed everything 🌊🔥" },
-        { src: "Photos and videos/Photo2 (Turns Out We Stayed At The Same Place).jpg", caption: "When we realized we stayed at the same place! 🏠" },
+        { src: "Photos and videos/Varsova beach.jpg", caption: "The beach encounter that changed everything 🌊🔥" },
+        { src: "Photos and videos/Photo8(Beach encounter with stranger).JPG", caption: "Bringing me flowers and melting my heart 💐❤️" },
+        { src: "Photos and videos/Photo2 (Turns Out We Stayed At The Same Place).jpg", caption: "Me and my fuckboy.. 🏠" },
         { src: "Photos and videos/Photo10 (Malad Wala Ghar & Cooking Experiments).JPG", caption: "Malad wala ghar: our favorite safe space 🛋️✨" },
         { src: "Photos and videos/Photo15 (Dinner at Jyoti & The Gate Bodyguard).jpeg", caption: "Society gate bodyguard & Jyoti dinner date 🍛🚪" },
         { src: "Photos and videos/Photo11 (Middle-of-the-Night Visits & Flowers).JPG", caption: "Middle-of-the-night visits & flowers 💐🌙" },
-        { src: "Photos and videos/Photo9 (Chidiya Udd & Word Building Championships).JPG", caption: "Chidiya Udd & Word building masterclass 🕊️📝" },
+        { src: "Photos and videos/Photo9 (Chidiya Udd & Word Building Championships).JPG", caption: "Name which is given permanently 🕊️📝" },
         { src: "Photos and videos/Photo1.JPG", caption: "Caught being the cutest motuu in existence 🥰" },
-        { src: "Photos and videos/Photo3.JPG", caption: "Cozy evenings and endless smiles ✨" },
-        { src: "Photos and videos/Photo4.JPG", caption: "The boy who waited for me with so much patience ⏳❤️" },
+        { src: "Photos and videos/Photo3.JPG", caption: "The boy who waited for me with so much patience ⏳❤️" },
+        { src: "Photos and videos/Photo4.JPG", caption: "Cozy evenings and endless smiles ✨" },
         { src: "Photos and videos/Photo5.JPG", caption: "Pure unfiltered happiness together 💖" },
-        { src: "Photos and videos/Photo6.JPG", caption: "Our sweetest moments frozen in time 📸" },
-        { src: "Photos and videos/Photo7.JPG", caption: "Undisputed champion of annoying me 24/7 🤪" },
-        { src: "Photos and videos/Photo12.jpg", caption: "The way you look at me makes the world stop 🥺" },
-        { src: "Photos and videos/Photo13.jpg", caption: "I love you more than you love stuffed kulcha! 🫓❤️" },
+        { src: "Photos and videos/Photo6.JPG", caption: "My favortie picture of yours... 📸" },
+        { src: "Photos and videos/Photo7.JPG", caption: "I would choose this moment with you a thousand times and over... 🤪" },
+        { src: "Photos and videos/Photo12.jpg", caption: "Just you, just me, JUST US. 💖" },
+        { src: "Photos and videos/Photo13.jpg", caption: "If I could keep one place forever, it would in your arms...🫓❤️" },
         { src: "Photos and videos/Photo14.jpg", caption: "Forever my favorite person in the entire world 💖" }
       ],
 
@@ -2292,15 +2326,15 @@
       videos: [
         { src: "Photos and videos/Video1.MP4", title: "Exhibit A: You Being Irresistibly Adorable 🥺", desc: "Just you melting my heart naturally" },
         { src: "Photos and videos/Video2.MP4", title: "Exhibit B: Certified Bhondu Energy 🤡", desc: "Caught in 4K being a complete clown" },
-        { src: "Photos and videos/Video3.MP4", title: "Exhibit C: Malad Wala Ghar Diaries 🏡", desc: "Late night laughter and pure cozy vibes" },
-        { src: "Photos and videos/Video4.mov", title: "Exhibit D: Dropping Me Home Ritual 🚗", desc: "The faithful society gate send-off" },
-        { src: "Photos and videos/Video5.MP4", title: "Exhibit E: Jyoti Dinner Shenanigans 🍛", desc: "Our nightly food pilgrimages" },
-        { src: "Photos and videos/Video6.MP4", title: "Exhibit F: Cooking Masterclass (Kinda) 🍳", desc: "Who let us into the kitchen?!" },
-        { src: "Photos and videos/Video7.MP4", title: "Exhibit G: Annoying Me Professional Mode 📸", desc: "His absolute #1 hobby in life" },
-        { src: "Photos and videos/Video8.MP4", title: "Exhibit H: Chidiya Udd Championship 🕊️", desc: "Intense debates over what can fly" },
+        { src: "Photos and videos/Video3.MP4", title: "Exhibit C: The Unforgettable Nights 🏡", desc: "Late night laughter and pure cozy vibes" },
+        { src: "Photos and videos/Video4.mov", title: "Exhibit D: She Wore The Heels. He Paid The Price. 🚗", desc: "My feet gave up, but my didn't" },
+        { src: "Photos and videos/Video5.MP4", title: "Exhibit E: Cute Moments Shared 🍛", desc: "Our nightly exausting bakchodis" },
+        { src: "Photos and videos/Video6.MP4", title: "Exhibit F: Rides With My Favorite Person🛺", desc: "Matching our damn freaks" },
+        { src: "Photos and videos/Video7.MP4", title: "Exhibit G: Being Clingy In A Professional Mode 📸", desc: "His absolute #1 hobby in life" },
+        { src: "Photos and videos/Jyoti.mp4", title: "Exhibit H: The Usual Dinner Spot 🍛", desc: "Intense debates over what can fly" },
         { src: "Photos and videos/Video9.MOV", title: "Exhibit I: Pure Unfiltered Happiness ✨", desc: "The million-dollar smile I fell for" },
         { src: "Photos and videos/Video10 (First time indore visit).MOV", title: "Exhibit J: First Time Indore Visit 🌆✈️", desc: "Unforgettable memories in Indore" },
-        { src: "Photos and videos/Video extra.MP4", title: "Bonus Reel: My Favorite Human Ever 🎬", desc: "Every single second with you is a gift" }
+        { src: "Photos and videos/Video extra.MP4", title: "Bonus Reel: My Favorite Human Ever 🎬", desc: "We flirt, we fight, we yap, we forget what we were talking about" }
       ],
 
       // Section 6: Reasons I Love You Cards
